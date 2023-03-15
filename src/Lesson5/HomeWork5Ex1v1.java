@@ -3,7 +3,7 @@ public class HomeWork5Ex1v1 {
     public static void main(String[] args) {
 
         // test – трёхмерный массив
-        int[][][] test = {
+        int[][][] test ={
                 {
                         {1, -2, 3},
                         {2, 3, 4}

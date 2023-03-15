@@ -2,6 +2,7 @@ package Less1.Lesson7.Cw1;
 
 public class Bus extends Car
 {
+    public boolean getVin;
     private float capacity;
 
     public Bus()
