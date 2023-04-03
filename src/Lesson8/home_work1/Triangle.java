@@ -1,22 +1,53 @@
 package Less1.Lesson8.home_work1;
 
-public class Triangle extends Figure {
-    int side1 = 3;
-    int side2 = 3;
-    int side3 = 5;
-    float formul = 0.5f;
-    int sumPrT;
-    float sumPlT;
+public class Triangle implements Figure
+{
+    private int side1;
+    private int side2;
+    private int side3;
 
-    void podschet()
-    {
-        sumPrT = side1 + side2 + side3;
-        System.out.println(sumPrT);
+    public Triangle() {
     }
 
-    void podschetPl()
+    public Triangle(int side1, int side2, int side3) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
+    }
+
+    public int getSide1() {
+        return side1;
+    }
+
+    public void setSide1(int side1) {
+        this.side1 = side1;
+    }
+
+    public int getSide2() {
+        return side2;
+    }
+
+    public void setSide2(int side2) {
+        this.side2 = side2;
+    }
+
+    public int getSide3() {
+        return side3;
+    }
+
+    public void setSide3(int side3) {
+        this.side3 = side3;
+    }
+
+    @Override
+    public float perimeter()
     {
-        sumPlT = side1 * side2 * formul;
-        System.out.println(sumPlT);
+        return (float) (side1 + side2 + side3);
+    }
+
+    @Override
+    public float square()
+    {
+        return (float) ((side1 * side2) / 2);
     }
 }

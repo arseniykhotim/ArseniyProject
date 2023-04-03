@@ -1,21 +1,43 @@
 package Less1.Lesson8.home_work1;
 
 public class Rectangle extends Triangle{
-    int side1 = 2;
-    int side2 = 4;
-    int sumPrR;
-    int sumPlR;
+    private int side1;
+    private int side2;
 
-    void podschet()
-    {
-        sumPrR = side1 + side2;
-        System.out.println(sumPrR);
+    public Rectangle() {
     }
 
-    void podschetPl()
+    public Rectangle(int side1, int side2) {
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+
+    public int getSide1() {
+        return side1;
+    }
+
+    public void setSide1(int side1) {
+        this.side1 = side1;
+    }
+
+    public int getSide2() {
+        return side2;
+    }
+
+    public void setSide2(int side2) {
+        this.side2 = side2;
+    }
+
+    @Override
+    public float perimeter()
     {
-        sumPlR = side1 * side2;
-        System.out.println(sumPlR);
+        return (float) ((side1 + side2) * 2);
+    }
+
+    @Override
+    public float square()
+    {
+        return (float) (side1 * side2);
     }
 
 }

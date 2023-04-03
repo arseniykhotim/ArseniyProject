@@ -1,21 +1,37 @@
 package Less1.Lesson8.home_work1;
 
-public class Circle extends Rectangle{
-    private int rad = 2;
-    private final float pi = 3.14f;
-    private float sCrC;
-    private float pCrC;
+public class Circle implements Figure
+{
+    private float r;
 
-    void sCircle ()
+    @Override
+    public float perimeter()
     {
-        sCrC = 2 * pi * rad;
-        System.out.println(sCrC);
+        return (float) (2 * Math.PI * r);
     }
 
-    void pCircle ()
+    @Override
+    public float square()
     {
-        pCrC = pi * (rad * rad);
-        System.out.println(pCrC);
+        return (float) (2 * Math.PI * Math.pow(r, 2));
     }
 
+    public Circle()
+    {
+    }
+
+    public Circle(float r)
+    {
+        this.r = r;
+    }
+
+    public float getR()
+    {
+        return r;
+    }
+
+    public void setR(float r)
+    {
+        this.r = r;
+    }
 }
